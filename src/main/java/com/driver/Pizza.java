@@ -36,7 +36,7 @@ public class Pizza {
             ExtraTopping = 70;
         } else {
             price = 400;
-            extraTopping = 120;
+            ExtraTopping = 120;
         }
         bill = "Base Price Of The Pizza: " + price + "\n";
     }
@@ -57,7 +57,7 @@ public class Pizza {
     public void addExtraToppings(){
         // your code goes here
         if (!isToppingsAdded) {
-            price += extraTopping;
+            price += ExtraTopping;
             isToppingsAdded = true;
         }
     }
@@ -79,7 +79,7 @@ public class Pizza {
                 bill += "Extra Cheese Added: " + extraCheese + "\n";
 
             if (isToppingsAdded)
-                bill += "Extra Toppings Added: " + extraTopping + "\n";
+                bill += "Extra Toppings Added: " + ExtraTopping + "\n";
 
             if (isPaperBagAdded)
                 bill += "PaperBag Added: " + PaperBag + "\n";
