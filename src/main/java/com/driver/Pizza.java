@@ -85,7 +85,7 @@ public class Pizza {
                 Bill += "PaperBag Added: " + PaperBag + "\n";
 
 
-            bill += "Total Price: " + Price + "\n";
+            Bill += "Total Price: " + Price + "\n";
 
 
         }
