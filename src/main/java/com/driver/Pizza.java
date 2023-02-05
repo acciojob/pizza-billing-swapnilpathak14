@@ -28,15 +28,15 @@ public class Pizza {
         this.isVeg = isVeg;
         // your code goes here
         
-        ExtraCheese = 80;
+        extraCheese = 80;
         PaperBag = 20;
         
         if (this.isVeg) {
             price = 300;
-            ExtraTopping = 70;
+            extraTopping = 70;
         } else {
             price = 400;
-            ExtraTopping = 120;
+            extraTopping = 120;
         }
         bill = "Base Price Of The Pizza: " + price + "\n";
     }
@@ -57,7 +57,7 @@ public class Pizza {
     public void addExtraToppings(){
         // your code goes here
         if (!isToppingsAdded) {
-            price += ExtraTopping;
+            price += extraTopping;
             isToppingsAdded = true;
         }
     }
@@ -79,7 +79,7 @@ public class Pizza {
                 bill += "Extra Cheese Added: " + extraCheese + "\n";
 
             if (isToppingsAdded)
-                bill += "Extra Toppings Added: " + ExtraTopping + "\n";
+                bill += "Extra Toppings Added: " + extraTopping + "\n";
 
             if (isPaperBagAdded)
                 bill += "PaperBag Added: " + PaperBag + "\n";
