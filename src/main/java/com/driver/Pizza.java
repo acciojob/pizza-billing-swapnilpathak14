@@ -4,9 +4,9 @@ package com.driver;
 
 public class Pizza {
     
-    private int Price;
+    private int price;
     private Boolean isVeg;
-    private String Bill;
+    private String bill;
     private boolean isCheeseAdded;
     private boolean isToppingsAdded;
     private boolean isPaperBagAdded;
@@ -32,24 +32,24 @@ public class Pizza {
         PaperBag = 20;
         
         if (this.isVeg) {
-            Price = 300;
+            price = 300;
             ExtraTopping = 70;
         } else {
-            Price = 400;
+            price = 400;
             extraTopping = 120;
         }
-        Bill = "Base Price Of The Pizza: " + Price + "\n";
+        bill = "Base Price Of The Pizza: " + price + "\n";
     }
 
     public int getPrice(){
         
-        return this.Price;
+        return this.price;
     }
 
     public void addExtraCheese(){
         // your code goes here
         if (!isCheeseAdded) {
-            Price += extraCheese;
+            price += extraCheese;
             isCheeseAdded = true;
         }
     }
@@ -57,7 +57,7 @@ public class Pizza {
     public void addExtraToppings(){
         // your code goes here
         if (!isToppingsAdded) {
-            Price += extraTopping;
+            price += extraTopping;
             isToppingsAdded = true;
         }
     }
@@ -65,7 +65,7 @@ public class Pizza {
     public void addTakeaway(){
         // your code goes here
          if (!isPaperBagAdded) {
-            Price += PaperBag;
+            price += PaperBag;
             isPaperBagAdded = true;
         }
     }
@@ -76,20 +76,20 @@ public class Pizza {
             isBillGenerated = true;
 
             if (isCheeseAdded)
-                Bill += "Extra Cheese Added: " + extraCheese + "\n";
+                bill += "Extra Cheese Added: " + extraCheese + "\n";
 
             if (isToppingsAdded)
-                Bill += "Extra Toppings Added: " + extraTopping + "\n";
+                bill += "Extra Toppings Added: " + extraTopping + "\n";
 
             if (isPaperBagAdded)
-                Bill += "PaperBag Added: " + PaperBag + "\n";
+                bill += "PaperBag Added: " + PaperBag + "\n";
 
 
-            Bill += "Total Price: " + Price + "\n";
+            bill += "Total Price: " + price + "\n";
 
 
         }
-        return this.Bill;
+        return this.bill;
         
     }
 }
