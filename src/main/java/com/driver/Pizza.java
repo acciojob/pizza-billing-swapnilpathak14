@@ -14,7 +14,7 @@ public class Pizza {
 
     private int extraCheese;
     private int extraTopping;
-    private int PaperBag;
+    private int paperBag;
 
     
 
@@ -29,7 +29,7 @@ public class Pizza {
         // your code goes here
         
         extraCheese = 80;
-        PaperBag = 20;
+        paperBag = 20;
         
         if (this.isVeg) {
             price = 300;
@@ -65,7 +65,7 @@ public class Pizza {
     public void addTakeaway(){
         // your code goes here
          if (!isPaperBagAdded) {
-            price += PaperBag;
+            price += paperBag;
             isPaperBagAdded = true;
         }
     }
@@ -82,7 +82,7 @@ public class Pizza {
                 bill += "Extra Toppings Added: " + extraTopping + "\n";
 
             if (isPaperBagAdded)
-                bill += "PaperBag Added: " + PaperBag + "\n";
+                bill += "PaperBag Added: " + paperBag + "\n";
 
 
             bill += "Total Price: " + price + "\n";
