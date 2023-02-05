@@ -1,9 +1,7 @@
 package com.driver;
 
-
-
 public class Pizza {
-    
+
     private int price;
     private Boolean isVeg;
     private String bill;
@@ -16,21 +14,19 @@ public class Pizza {
     private int extraTopping;
     private int paperBag;
 
-    
 
-    public Pizza(Boolean isVeg){
-        
+    public Pizza(Boolean isVeg) {
         isBillGenerated = false;
         isCheeseAdded = false;
         isToppingsAdded = false;
         isPaperBagAdded = false;
-        
+
         this.isVeg = isVeg;
-        // your code goes here
-        
+
         extraCheese = 80;
         paperBag = 20;
-        
+
+        // your code goes here
         if (this.isVeg) {
             price = 300;
             extraTopping = 70;
@@ -41,12 +37,13 @@ public class Pizza {
         bill = "Base Price Of The Pizza: " + price + "\n";
     }
 
-    public int getPrice(){
-        
+    public int getPrice() {
+
         return this.price;
     }
 
-    public void addExtraCheese(){
+
+    public void addExtraCheese() {
         // your code goes here
         if (!isCheeseAdded) {
             price += extraCheese;
@@ -54,7 +51,7 @@ public class Pizza {
         }
     }
 
-    public void addExtraToppings(){
+    public void addExtraToppings() {
         // your code goes here
         if (!isToppingsAdded) {
             price += extraTopping;
@@ -62,15 +59,15 @@ public class Pizza {
         }
     }
 
-    public void addTakeaway(){
+    public void addTakeaway() {
         // your code goes here
-         if (!isPaperBagAdded) {
+        if (!isPaperBagAdded) {
             price += paperBag;
             isPaperBagAdded = true;
         }
     }
 
-    public String getBill(){
+    public String getBill() {
         // your code goes here
         if (!isBillGenerated) {
             isBillGenerated = true;
@@ -82,7 +79,7 @@ public class Pizza {
                 bill += "Extra Toppings Added: " + extraTopping + "\n";
 
             if (isPaperBagAdded)
-                bill += "PaperBag Added: " + paperBag + "\n";
+                bill += "Paperbag Added: " + paperBag + "\n";
 
 
             bill += "Total Price: " + price + "\n";
@@ -90,6 +87,5 @@ public class Pizza {
 
         }
         return this.bill;
-        
     }
 }
